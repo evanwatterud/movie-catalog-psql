@@ -1,0 +1,8 @@
+<h1><%= @actor_details[0]["name"] %></h1>
+
+<h3>Starred in:</h3>
+<ul style="list-style-type: none;">
+  <% @actor_details.each do |row| %>
+    <li><a href="/movies/<%= row['id'] %>"><%= row['title'] %></a> as <%= row['character'] %></li>
+  <% end %>
+</ul>

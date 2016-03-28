@@ -1,0 +1,11 @@
+<h1><%= @movie[0]["title"] %></h1>
+
+<h3>Studio: <%= @movie[0]["studio"] %></h3>
+<h3>Rating: <%= @movie[0]["rating"] %></h3>
+<h3>Year: <%= @movie[0]["year"] %></h3>
+<h3>Genre: <%= @movie[0]["genre"] %></h3>
+<ul style="list-style-type: none;">Cast:
+  <% @movie.each do |row| %>
+    <li><a href="/actors/<%= row['id'] %>"><%= row['actor'] %></a> as <%= row['character'] %></li>
+  <% end %>
+</ul>
